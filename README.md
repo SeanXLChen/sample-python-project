@@ -1,35 +1,35 @@
 # Poetry Demo
 
-A demo project using Poetry for dependency management.
+一个演示如何结合 Conda 和 Poetry 进行依赖管理的项目。
 
-## Setup
+## 环境搭建
 
-1. Create and activate the conda environment (if not already created):
+1. 创建并激活 conda 环境（如未创建）：
 ```bash
-conda create -n poetry-demo python=3.11 
+conda create -n poetry-demo python=3.11
 conda activate poetry-demo
 ```
 
-2. (Recommended, run once) Configure Poetry to use the current conda environment, not a separate venv:
+2. （推荐，仅需执行一次）配置 Poetry 使其使用当前 conda 环境，而不是单独创建 venv：
 ```bash
 poetry config virtualenvs.create false
 ```
-> This command can (and should) be run inside your conda environment. It ensures Poetry will use your active conda environment instead of creating a new virtualenv. Otherwise, Poetry will default to creating a separate virtual environment in `~/.cache/pypoetry/virtualenvs`, which may conflict with your conda environment.
+> 该命令建议在 conda 环境内执行。这样 Poetry 会直接使用你激活的 conda 环境，而不会在 `~/.cache/pypoetry/virtualenvs` 下新建虚拟环境，避免冲突。
 
-3. (For new projects) Initialize Poetry in your project folder (if you don't have a `pyproject.toml` yet):
+3. （新项目需）初始化 Poetry（如果还没有 `pyproject.toml`）：
 ```bash
 poetry init
 ```
-Follow the prompts to set up your project dependencies.
+根据提示填写依赖。
 
-4. Install project dependencies:
+4. 安装项目依赖：
 ```bash
 poetry install
 ```
 
 ---
 
-**Tip:** Always activate your conda environment before running any Poetry commands for this project:
+**提示：** 每次操作 Poetry 相关命令前，请先激活 conda 环境：
 ```bash
 conda activate poetry-demo
 ```
