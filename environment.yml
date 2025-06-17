@@ -1,0 +1,25 @@
+name: poetry-demo
+channels:
+  - conda-forge
+  - defaults
+dependencies:
+  - python=3.11
+  - ipykernel
+  - jupyterlab
+  - numpy
+  - pandas
+  - pip
+  - pip:
+    - poetry
+
+# 使用方法：
+# 1. 创建环境：
+#    conda env create -f environment.yml
+# 或者更新环境：
+#    conda env update -n poetry-demo -f environment.yml
+# 2. 激活环境：
+#    conda activate poetry-demo
+# 3. （推荐，仅需执行一次）配置 Poetry 使用当前 conda 环境，不自动创建 venv：
+#    poetry config virtualenvs.create false
+# 4. 安装项目依赖：
+#    poetry install 
